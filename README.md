@@ -2,14 +2,16 @@
 
 A python wrapper for the Multivariate Recursive Nested Bias Correction (MRNBC) Fortran package. 
 
+Generic code is located in pymrnbc.py, however the other scripts (particularly example_calc_mrnbc) show how it is used and include important parameters that the code expects.
+
 ## Running the example scripts
 
-Requirements: Running the bias correction method requires access to following NCI projects: hh5, dk92, ia39
+Requirements: Running the bias correction example requires access to following NCI projects: hh5, dk92, ia39
 
 1. Compile the Fortran code by running the following command in the directory:
    - `bash pybuild.sh`
 
-2. Change the temp and output directories in the 5 Python scripts (example_calc_mrnbc, example_chunk_mrnbc, example_chunk_ref, example_convert_to_nc and example_repair_mrnbc) to relevant and accessible directories for your use. You may need to check the job pbs scripts for relevant dependencies depending on which projects your chosen directories are in.
+2. Change the temp and output directories in the 5 example Python scripts (example_calc_mrnbc, example_chunk_mdl, example_chunk_ref, example_convert_to_nc and example_repair_mrnbc) to relevant and accessible directories for your use. You may need to check the job pbs scripts for relevant dependencies depending on which projects your chosen directories are in. Home directories are not advised to be chosen here due to space requirements.
 
 3. Run the reference data chunking script:
    - `qsub job-ref-chunk.pbs`
