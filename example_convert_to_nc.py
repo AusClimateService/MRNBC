@@ -13,10 +13,10 @@ import dask
 from dask.distributed import Client, LocalCluster, wait
 
 # should match the calcdir of acs_calc_mrnbc and acs_repair_mrnbc
-calcdir = "/scratch/eg3/ag0738/mrnbc/example/zarr_out/"
+calcdir = "../example/zarr_out/"
 
 # output directory path
-outdir = "/scratch/eg3/ag0738/mrnbc/example/converted/"
+outdir = "../example/converted/"
 # outdir = "/g/data/ia39/australian-climate-service/test-data/CORDEX-CMIP6/bias-adjustment-output/AGCD-05i/"
 
 

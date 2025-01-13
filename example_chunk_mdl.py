@@ -15,7 +15,7 @@ from pymrnbc import get_sections
 
 
 # set as appropriate, though this is an intermediate step so should be scratch or other temp location   
-chunkdir = "/scratch/eg3/ag0738/mrnbc/example/zarr_in/"
+chunkdir = "../example/zarr_in/"
     
 
 # AGCD data uses slightly different variable names

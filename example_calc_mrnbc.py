@@ -15,8 +15,8 @@ import module
 
 # set as appropriate, though this is an intermediate step so should be scratch or other temp location
 # chunkdir should match the directory given in acs_chunk_mrnbc and acs_chunk_ref 
-chunkdir = "/scratch/eg3/ag0738/mrnbc/example/zarr_in/"
-calcdir = "/scratch/eg3/ag0738/mrnbc/example/zarr_out/"
+chunkdir = "../example/zarr_in/"
+calcdir = "../example/zarr_out/"
 
 
 def standardise_latlon(ds, digits=2):
