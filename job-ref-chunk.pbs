@@ -1,0 +1,23 @@
+#!/bin/bash
+#PBS -l ncpus=48
+#PBS -l mem=1470GB
+#PBS -l jobfs=1000GB
+#PBS -q hugemem
+#PBS -P eg3
+#PBS -l walltime=04:00:00
+#PBS -l storage=gdata/hh5+gdata/dk92+gdata/ia39+scratch/eg3+gdata/xv83
+#PBS -l wd
+#PBS -j oe
+#PBS -o logs
+
+module use /g/data/hh5/public/modules
+module load conda_concept/analysis3-23.04
+
+module use /g/data/dk92/apps/Modules/modulefiles
+module load gadi_jupyterlab/23.02
+
+jupyter.ini.sh -D
+
+command="python example_chunk_ref.py"
+echo ${command}
+${command}

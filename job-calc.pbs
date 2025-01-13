@@ -1,0 +1,25 @@
+#!/bin/bash
+#PBS -l ncpus=104
+#PBS -l mem=500GB
+#PBS -l jobfs=400GB
+#PBS -q normalsr
+#PBS -P eg3
+#PBS -l walltime=8:00:00
+#PBS -l storage=gdata/hh5+gdata/dk92+gdata/ia39+scratch/eg3+gdata/xv83+gdata/mn51
+#PBS -l wd
+#PBS -j oe
+#PBS -o logs
+
+module use /g/data/hh5/public/modules
+# module load conda_concept/analysis3-23.10
+module load conda_concept/analysis3-24.01
+
+module use /g/data/dk92/apps/Modules/modulefiles
+module load gadi_jupyterlab/23.02
+
+jupyter.ini.sh -D
+
+command="python example_calc_mrnbc.py"
+echo ${command}
+${command}
+
