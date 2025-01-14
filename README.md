@@ -1,5 +1,7 @@
 # MRNBC
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14641855.svg)](https://doi.org/10.5281/zenodo.14641855)
+
 A Python wrapper for the Multivariate Recursive Nested Bias Correction (MRNBC) Fortran package, which was [originally written by Rajeshwar Mehrotra](https://doi.org/10.1016/j.jhydrol.2014.11.037).
 
 The Fortran code provided here has been modified by Arpit Kapoor to work with f2py, and the associated Python code was written by both him and Andrew Gammon for the ACS.
